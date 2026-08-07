@@ -1,0 +1,17 @@
+# engine/requirements.txt — Python Rule Engine Dependencies
+#
+# Install with: pip install -r requirements.txt
+#
+# Flask + CORS — REST API server
+flask==3.0.0
+flask-cors==4.0.0
+
+# Pandas + openpyxl — Excel file parsing
+pandas==2.1.3
+openpyxl==3.1.2
+
+# PyMongo — MongoDB driver for fetching rules
+pymongo==4.6.0
+
+# python-dotenv — load .env variables in standalone scripts
+python-dotenv==1.0.0
