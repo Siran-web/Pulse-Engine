@@ -4,6 +4,8 @@ import Navbar from './components/Navbar';
 import LandingPage from './pages/LandingPage';
 import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
+import DoctorDashboard from './pages/DoctorDashboard';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -15,6 +17,11 @@ function App() {
               <Route path="/" element={<LandingPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/login" element={<LoginPage />} />
+
+              <Route element={<ProtectedRoute allowedRoles={['doctor']} />}>
+                <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
+              </Route>
+
             </Routes>
           </main>
         </div>
