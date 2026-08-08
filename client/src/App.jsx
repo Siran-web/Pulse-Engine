@@ -1,17 +1,24 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { GoogleOAuthProvider } from "@react-oauth/google";
 import Navbar from './components/Navbar';
 import LandingPage from './pages/LandingPage';
+import RegisterPage from './pages/RegisterPage';
+import LoginPage from './pages/LoginPage';
 
 function App() {
   return (
     <Router>
-      <div className="flex flex-col min-h-screen">
-        <main className="flex-grow flex flex-col">
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-          </Routes>
-        </main>
-      </div>
+      <GoogleOAuthProvider clientId="YOUR_GOOGLE_CLIENT_ID">
+        <div className="flex flex-col min-h-screen">
+          <main className="flex-grow flex flex-col">
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+              <Route path="/login" element={<LoginPage />} />
+            </Routes>
+          </main>
+        </div>
+      </GoogleOAuthProvider>
     </Router>
   );
 }
