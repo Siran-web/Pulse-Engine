@@ -6,6 +6,7 @@ import RegisterPage from './pages/RegisterPage';
 import LoginPage from './pages/LoginPage';
 import DoctorDashboard from './pages/DoctorDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
+import AdminDashboard from './pages/AdminDashboard';
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
                 <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
               </Route> */}
 
-              <Route path="/" element={<DoctorDashboard />} />
+              <Route path="/" element={<AdminDashboard />} />
 
             </Routes>
           </main>
