@@ -14,13 +14,15 @@ function App() {
         <div className="flex flex-col min-h-screen">
           <main className="flex-grow flex flex-col">
             <Routes>
-              <Route path="/" element={<LandingPage />} />
+              {/* <Route path="/" element={<LandingPage />} />
               <Route path="/register" element={<RegisterPage />} />
               <Route path="/login" element={<LoginPage />} />
 
               <Route element={<ProtectedRoute allowedRoles={['doctor']} />}>
                 <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
-              </Route>
+              </Route> */}
+
+              <Route path="/" element={<DoctorDashboard />} />
 
             </Routes>
           </main>
